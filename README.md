@@ -17,7 +17,7 @@
  - 属性配置：
 
 ```
- <com.ghy.corelib.ui.WaveView
+ <com.ghy.wave.ui.WaveView
         android:id="@+id/waveView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
