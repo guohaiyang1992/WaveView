@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/turnOn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开" />
+
+    <Button
+        android:layout_below="@id/turnOn"
+        android:id="@+id/turnOff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="关" />
+
+    <com.ghy.corelib.ui.WaveView
+        android:id="@+id/waveView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:wave_anim_auto_run="true"
+        app:wave_color="@color/colorPrimary"
+        app:wave_count="2"
+        app:wave_duration="2000" />
+</RelativeLayout>
