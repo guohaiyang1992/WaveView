@@ -1,4 +1,4 @@
-package com.ghy.corelib.ui;
+package com.ghy.wave.ui;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -10,13 +10,13 @@ import android.graphics.Path;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 
-import com.ghy.corelib.R;
-import com.ghy.corelib.utils.DisplayUtils;
-import com.ghy.corelib.utils.UnitUtils;
+import com.ghy.wave.R;
+import com.ghy.wave.utils.DisplayUtils;
+import com.ghy.wave.utils.UnitUtils;
+
 
 public class WaveView extends View {
     //画笔
@@ -83,12 +83,18 @@ public class WaveView extends View {
 //        if (waveCount < 2) {
 //            waveCount = 2;
 //        }
+
+        updateColor(color);
+
+        if (duration <= 0) {
+            duration = 2000;
+        }
+    }
+
+    private void updateColor(int color) {
         if (Color.alpha(color) == 0 || Color.alpha(color) > 64) {
             color = Color.argb(64, Color.red(color), Color.green(color), Color.blue(color));
             mPaint.setColor(color);
-        }
-        if (duration <= 0) {
-            duration = 2000;
         }
     }
 
@@ -166,6 +172,22 @@ public class WaveView extends View {
         if (anim != null && anim.isRunning()) {
             anim.pause();
         }
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+        endAnim();
+        startAnim();
+    }
+
+    public void setColor(int color) {
+        this.color = color;
+        updateColor(color);
+    }
+
+
+    public void setWaveCount(int waveCount) {
+        this.waveCount = waveCount;
     }
 
     /**

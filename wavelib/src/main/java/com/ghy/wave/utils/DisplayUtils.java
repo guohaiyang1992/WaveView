@@ -1,4 +1,4 @@
-package com.ghy.corelib.utils;
+package com.ghy.wave.utils;
 
 import android.content.Context;
 import android.view.WindowManager;

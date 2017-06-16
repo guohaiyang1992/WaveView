@@ -1,4 +1,4 @@
-package com.ghy.corelib;
+package com.ghy.core;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.ghy.corelib.test", appContext.getPackageName());
+        assertEquals("com.ghy.core.test", appContext.getPackageName());
     }
 }

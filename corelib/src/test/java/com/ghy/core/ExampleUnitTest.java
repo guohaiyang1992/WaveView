@@ -1,4 +1,4 @@
-package com.ghy.waveviewdemo;
+package com.ghy.core;
 
 import org.junit.Test;
 

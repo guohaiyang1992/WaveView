@@ -11,13 +11,34 @@
         android:text="开" />
 
     <Button
-        android:layout_below="@id/turnOn"
         android:id="@+id/turnOff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/turnOn"
         android:text="关" />
 
-    <com.ghy.corelib.ui.WaveView
+    <Button
+        android:id="@+id/changeColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/turnOff"
+        android:text="修改颜色" />
+
+    <Button
+        android:id="@+id/changeNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/changeColor"
+        android:text="修改数量" />
+
+    <Button
+        android:id="@+id/changeDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/changeNum"
+        android:text="修改时间" />
+
+    <com.ghy.wave.ui.WaveView
         android:id="@+id/waveView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

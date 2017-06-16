@@ -1,10 +1,11 @@
-package com.ghy.waveviewdemo;
+package com.ghy.waveview;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.ghy.corelib.ui.WaveView;
+import com.ghy.wave.ui.WaveView;
+
 
 public class MainActivity extends AppCompatActivity {
     WaveView waveView;
@@ -26,5 +27,25 @@ public class MainActivity extends AppCompatActivity {
                 waveView.endAnim();
             }
         });
+
+        findViewById(R.id.changeColor).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                waveView.setColor(0x000000);
+            }
+        });
+        findViewById(R.id.changeNum).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                waveView.setWaveCount(3);
+            }
+        });
+        findViewById(R.id.changeDuration).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                waveView.setDuration(2500);
+            }
+        });
+
     }
 }
