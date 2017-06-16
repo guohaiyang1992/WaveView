@@ -61,6 +61,6 @@ setDuration(int duration) //设置动画时间（时间长速度慢，时间短�
 
 ```
 dependencies {
-     compile 'com.github.guohaiyang1992:WaveView:0.1'
+     compile 'com.github.guohaiyang1992:WaveView:0.2'
 	}
 ```
